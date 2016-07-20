@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Class-Path: aspectjrt-1.6.10.jar jstl-1.2.jar user-service-client-3.1.
+ jar user-service-common-3.1.jar httpcore-4.2.jar httpclient-4.2.3.jar
+  commons-logging-1.1.3.jar commons-codec-1.10.jar httpmime-4.2.3.jar 
+ cas-client-core-3.2.1.jar s3-dao-2.1.jar aws-java-sdk-1.7.2.jar jacks
+ on-core-2.1.1.jar jackson-databind-2.1.1.jar jackson-annotations-2.1.
+ 1.jar joda-time-2.8.2.jar commons-1.4.3-SNAPSHOT.jar mybatis-spring-1
+ .2.2.jar mybatis-3.2.3.jar ognl-2.6.9.jar cglib-2.2.2.jar asm-3.3.1.j
+ ar javax.ws.rs-api-2.0.jar guava-18.0.jar jersey-server-2.4.1.jar jer
+ sey-common-2.4.1.jar javax.annotation-api-1.2.jar hk2-api-2.2.0-b21.j
+ ar hk2-utils-2.2.0-b21.jar javax.inject-2.2.0-b21.jar hk2-locator-2.2
+ .0-b21.jar asm-all-repackaged-2.2.0-b21.jar cglib-2.2.0-b21.jar osgi-
+ resource-locator-1.0.1.jar jersey-client-2.4.1.jar validation-api-1.1
+ .0.Final.jar jersey-container-servlet-core-2.4.1.jar jersey-media-mul
+ tipart-2.4.1.jar mimepull-1.9.3.jar jersey-media-json-jackson-2.4.1.j
+ ar jackson-core-asl-1.9.13.jar jackson-mapper-asl-1.9.13.jar jackson-
+ jaxrs-1.9.11.jar jackson-xc-1.9.11.jar jersey-media-moxy-2.4.1.jar je
+ rsey-entity-filtering-2.4.1.jar org.eclipse.persistence.moxy-2.5.0.ja
+ r org.eclipse.persistence.core-2.5.0.jar org.eclipse.persistence.asm-
+ 2.5.0.jar org.eclipse.persistence.antlr-2.5.0.jar jersey-spring3-2.4.
+ 1.jar hk2-2.2.0-b21.jar config-types-2.2.0-b21.jar hk2-config-2.2.0-b
+ 21.jar core-2.2.0-b21.jar tiger-types-1.4.jar bean-validator-2.2.0-b2
+ 1.jar hk2-runlevel-2.2.0-b21.jar class-model-2.2.0-b21.jar spring-bri
+ dge-2.2.0-b21.jar spring-context-4.0.6.RELEASE.jar spring-aop-4.0.6.R
+ ELEASE.jar aopalliance-1.0.jar spring-beans-4.0.6.RELEASE.jar spring-
+ core-4.0.6.RELEASE.jar spring-expression-4.0.6.RELEASE.jar spring-web
+ -4.0.6.RELEASE.jar commons-lang-2.6.jar commons-collections-3.2.1.jar
+  commons-net-3.3.jar commons-io-1.3.2.jar jsch-0.1.52.jar commons-dig
+ ester-1.8.jar commons-beanutils-1.7.0.jar spring-webmvc-4.0.6.RELEASE
+ .jar spring-aspects-4.0.6.RELEASE.jar aspectjweaver-1.8.1.jar spring-
+ tx-4.0.6.RELEASE.jar spring-security-core-3.2.3.RELEASE.jar spring-se
+ curity-web-3.2.3.RELEASE.jar spring-security-config-3.2.3.RELEASE.jar
+  spring-jdbc-3.2.6.RELEASE.jar velocity-1.7.jar json-20140107.jar qua
+ rtz-1.6.1.jar c3p0-0.9.1.2.jar commons-lang3-3.3.2.jar slf4j-api-1.6.
+ 6.jar jcl-over-slf4j-1.6.6.jar slf4j-log4j12-1.6.6.jar log4j-1.2.16.j
+ ar
+
