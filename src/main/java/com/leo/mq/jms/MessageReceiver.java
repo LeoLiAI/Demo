@@ -12,10 +12,12 @@ package com.leo.mq.jms;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
+import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
+
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
  
@@ -30,7 +32,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  * @email hoojo_@126.com
  * @version 1.0
  */
-public class MessageReceiver {
+public class MessageReceiver extends Thread{
  
     // tcp 地址
     public static final String BROKER_URL = "tcp://localhost:61616";
@@ -38,7 +40,7 @@ public class MessageReceiver {
     public static final String DESTINATION = "hoo.mq.queue";
     
     
-    public static void run() throws Exception {
+    public void run() {
         
         Connection connection = null;
         Session session = null;
@@ -62,7 +64,7 @@ public class MessageReceiver {
                 
                 TextMessage text = (TextMessage) message;
                 if (text != null) {
-                    System.out.println("接收：" + text.getText());
+                    System.out.println(Thread.currentThread().getName()+"接收：" + text.getText());
                 } else {
                     break;
                 }
@@ -72,19 +74,31 @@ public class MessageReceiver {
             session.commit();
             
         } catch (Exception e) {
-            throw e;
+            
         } finally {
             // 关闭释放资源
             if (session != null) {
-                session.close();
+                try {
+					session.close();
+				} catch (JMSException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
             if (connection != null) {
-                connection.close();
+                try {
+					connection.close();
+				} catch (JMSException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         }
     }
     
     public static void main(String[] args) throws Exception {
-        MessageReceiver.run();
+       new MessageReceiver().start();
+       new MessageReceiver().start();
+       new MessageReceiver().start();
     }
 }

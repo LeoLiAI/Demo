@@ -31,17 +31,23 @@ package com.leo.multi.thread;
 public class LeoTest {
 	
 	public static void main(String[] args){
-		NumberCount numberCount = new NumberCount();
-		OddThread odd = new OddThread(numberCount);
-//		Thread thread_1 = new Thread(odd,"thread_1");
-		Thread thread_2 = new Thread(odd,"thread_2");
-		Thread thread_3 = new Thread(new EvenThread(numberCount),"thread_3");
-		Thread thread_4 = new Thread(new EvenThread(numberCount),"thread_4");
-//		thread_1.start();
-		thread_2.start();
-		thread_3.start();
-//		thread_4.start();
+//		NumberCount numberCount = new NumberCount();
+//		OddThread odd = new OddThread(numberCount);
+////		Thread thread_1 = new Thread(odd,"thread_1");
+//		Thread thread_2 = new Thread(odd,"thread_2");
+//		Thread thread_3 = new Thread(new EvenThread(numberCount),"thread_3");
+//		Thread thread_4 = new Thread(new EvenThread(numberCount),"thread_4");
+////		thread_1.start();
+//		thread_2.start();
+//		thread_3.start();
+////		thread_4.start();
 		
+		int i ;
+		systemOut(i);
+		
+	}
+	public static void systemOut(int i){
+		System.out.print(i);
 	}
 
 }

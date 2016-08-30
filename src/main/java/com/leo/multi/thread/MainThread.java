@@ -11,6 +11,7 @@ package com.leo.multi.thread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /***************************************************************************
  *<PRE>
@@ -34,9 +35,9 @@ import java.util.concurrent.Executors;
 public class MainThread {
 	public static void main(String[] args){
 		ExecutorService exec = Executors.newSingleThreadExecutor();
-		for(int i=0;i<20;i++){
+		for(int i=0;i<5;i++){
 //			Thread thread = new Thread(new MsgPrint());
-			exec.execute(new MsgPrint());
+			exec.execute(new LiftOff());
 		}
 		exec.shutdown();
 	}
@@ -57,7 +58,7 @@ class MsgPrint implements Runnable{
 	public void run() {
 		for (int i = 0;i<3;i++){
 			System.out.println("正在输出消息:"+i);
-			Thread.yield();
+			
 		}
 		System.out.println(Thread.currentThread().getName()+":end");
 	}
@@ -80,8 +81,15 @@ class LiftOff implements Runnable{
 	}
 	public void run() {
 		while(countDown-- >0){
-			System.out.print(status());
-			Thread.yield();
+			System.out.println(status());
+			try {
+				TimeUnit.MILLISECONDS.sleep(1000);
+				Thread.yield();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
 		
 	}
